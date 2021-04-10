@@ -23,7 +23,13 @@
   "minimum_chrome_version": "80",
   "commands": {
     "copy_link": {
-      "description": "__MSG_copy_link__"
+      "description": "__MSG_copy_link__",
+      "global": true,
+      "suggested_key": {
+        "default": "Ctrl+Shift+C",
+        "windows": "Ctrl+Shift+C",
+        "mac": "Command+Shift+C"
+      }
     }
   }
 }
