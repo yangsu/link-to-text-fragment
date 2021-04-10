@@ -217,7 +217,13 @@
       }
       const clipboardData = [
         new ClipboardItem({
-          'text/plain': new Blob([url], { type: 'text/plain' }),
+          // 'text/plain': new Blob([url], { type: 'text/plain' }),
+          'text/plain': new Blob(
+            [`[${selectedText}](${url.replace(/\(|\)|\.$/g, '')})`],
+            {
+              type: 'text/plain',
+            }
+          ),
           'text/html': new Blob([`<a href="${url}">${selectedText}</a>`], {
             type: 'text/html',
           }),
